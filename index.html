@@ -10,6 +10,22 @@
       
 
       <a-sky color="lightblue"></a-sky>
+      <a-entity id="cameraRig" position="0 1.6 0" >
+        <a-entity id="head" position="0 0 0" camera="userHeight:1.6" look-controls="pointerLockEnabled:true">
+          <a-entity position="0.1 -0.1 0"
+            touch-listener
+            teleport-controls=
+              "cameraRig: #cameraRig;
+               teleportOrigin: #head;
+               startEvents:starttouch;
+               endEvents:endtouch;
+               curveShootingSpeed:15;
+               hitCylinderRadius:1;
+               collisionEntities: [ground]"
+            >
+          </a-entity>
+        </a-entity>
+      </a-entity>  
       <a-entity gltf-model="url(Virtual Mart.glb)" position="-5 -0.3 -7"></a-entity>
       <a-entity gltf-model="url(Dressing Table.glb)" position="-9 -2.5 -14" rotation="0 180 0" ></a-entity>
       <a-entity gltf-model="url(Dinning Table.glb)" position="-18 -2.5 -32" rotation="0 180 0" scale="1.5 1.5 1.5"></a-entity>
