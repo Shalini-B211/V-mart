@@ -8,6 +8,7 @@
     <a-scene>
 
       
+      </a-entity>  
 
       <a-sky color="lightblue"></a-sky>
       
@@ -31,6 +32,24 @@
 
   </body>!-->
   <body>
+
+    <a-entity id="cameraRig" position="0 1.6 0" >
+      <a-entity id="head" position="0 0 0" camera="userHeight:1.6" look-controls="pointerLockEnabled:true">
+        <a-entity position="0.1 -0.1 0"
+          touch-listener
+          teleport-controls=
+            "cameraRig: #cameraRig;
+             teleportOrigin: #head;
+             startEvents:starttouch;
+             endEvents:endtouch;
+             curveShootingSpeed:15;
+             hitCylinderRadius:1;
+             collisionEntities: [ground]"
+          >
+        </a-entity>
+      </a-entity>
+
+
     <a-scene  cursor="rayOrigin: mouse;fuse: false" raycaster="objects: .raycastable">
     <a-assets>
       <a-asset-item id="barchairmodel" src="http://localhost/AFrame/Bar chair.glb"></a-asset-item>
