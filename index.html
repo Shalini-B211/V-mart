@@ -4,7 +4,7 @@
     <script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script>
     <script src="https://unpkg.com/aframe-event-set-component@3.0.3/dist/aframe-event-set-component.min.js"></script>
   </head>
-  <body>
+  <!--<body>
     <a-scene>
 
       
@@ -28,9 +28,369 @@
       <a-entity gltf-model="url(Closet.glb)" position="-9 -1 -14" rotation="0 180 0" ></a-entity>
       <a-entity gltf-model="url(Dressing Table.glb)" position="-15.5 -2.9 -31.5" rotation="0 -90 0" scale="1.4 1.4 1.4"></a-entity>
       <a-entity gltf-model="url(CupBoard.glb)" position="-16 -9 -9.5" rotation="0 90 0" scale="0.9 1.5 0.9"></a-entity>
-
-    
+      <a-entity gltf-model="url(Virtual Mart.glb)" position="-8 -0.3 -7"></a-entity>
+      
     </a-scene>
 
-  </body>
+  </body>!-->
+  <body>
+    <a-scene  cursor="rayOrigin: mouse;fuse: false" raycaster="objects: .raycastable">
+    <a-assets>
+      <a-asset-item id="barchairmodel" src="http://localhost/AFrame/Bar chair.glb"></a-asset-item>
+      <a-asset-item id="barchair" src="http://localhost/AFrame/Barmodel.glb"></a-asset-item>
+
+      <a-asset-item id="Armchairmodel" src="http://localhost/AFrame/Armchair.glb"></a-asset-item>
+      <a-asset-item id="armchair" src="http://localhost/AFrame/armmodel.glb"></a-asset-item>
+
+      <a-asset-item id="bedmodel" src="http://localhost/AFrame/Bed.glb"></a-asset-item>
+      <a-asset-item id="bed" src="http://localhost/AFrame/Bedmodel.glb"></a-asset-item>
+
+      <a-asset-item id="bookshelfmodel" src="http://localhost/AFrame/Book Shelf.glb"></a-asset-item>
+      <a-asset-item id="bookshelf" src="http://localhost/AFrame/bookmodel.glb"></a-asset-item>
+
+      <a-asset-item id="Cupboardmodel" src="http://localhost/AFrame/Cupboard.glb"></a-asset-item>
+      <a-asset-item id="Cupboard" src="http://localhost/AFrame/Cupmodelglb"></a-asset-item>
+
+      <a-asset-item id="Dinningmodel" src="http://localhost/AFrame/Dinning Table.glb"></a-asset-item>
+      <a-asset-item id="DT" src="http://localhost/AFrame/Dinningtabmodel.glb"></a-asset-item>
+
+      <a-asset-item id="Dinningmodel2" src="http://localhost/AFrame/Dinning Table2.glb"></a-asset-item>
+      <a-asset-item id="DT2" src="http://localhost/AFrame/Dinningtabmodel2.glb"></a-asset-item>
+
+      <a-asset-item id="Dressingmodel" src="http://localhost/AFrame/Dressing Table.glb"></a-asset-item>
+      <a-asset-item id="Dressingt" src="http://localhost/AFrame/DressingTab.glb"></a-asset-item>
+
+      <a-asset-item id="Kitchensinkmodel" src="http://localhost/AFrame/Kitchen Sink.glb"></a-asset-item>
+      <a-asset-item id="sink" src="http://localhost/AFrame/sink.glb"></a-asset-item>
+
+      <a-asset-item id="loungechairmodel" src="http://localhost/AFrame/Lounge Chair.glb"></a-asset-item>
+      <a-asset-item id="lchair" src="http://localhost/AFrame/lounge chair.glb"></a-asset-item>
+
+      <a-asset-item id="sofamodel" src="http://localhost/AFrame/Sofa.glb"></a-asset-item>
+      <a-asset-item id="sofaa" src="http://localhost/AFrame/sofa.glb"></a-asset-item>
+
+      <a-asset-item id="stbed" src="http://localhost/AFrame/Stand Bed.glb"></a-asset-item>
+      <a-asset-item id="stdbed" src="http://localhost/AFrame/standbed.glb"></a-asset-item>
+
+      <a-asset-item id="swingmodel" src="http://localhost/AFrame/Swing Chair.glb"></a-asset-item>
+      <a-asset-item id="schair" src="http://localhost/AFrame/swingchair.glb"></a-asset-item>
+
+      <!-- Add more <a-asset-item> elements for your other models -->
+    </a-assets>
+    
+    <!-- Create a plane to serve as the button -->
+    <a-entity id="ba-button"
+              gltf-model="#barchairmodel"              
+              position="-2 -2 -37"
+              scale="0.3 0.3 0.3"
+              rotation="0 90 0"
+              class="raycastable"
+              clickable
+              event-set__click="_event: click; _target: #ba-model; visible: !ba-model.visible">
+    </a-entity>
+    
+    <!-- The GLTF model entity to display -->
+    <a-entity id="ba-model" gltf-model="#barchair"
+              position="3 2 -5"
+              scale="0.2 0.2 0.2"
+              rotation="360 89 93"
+              visible="false"
+              class="raycastable"
+              event-set__mouseenter="_event: mouseenter; _target: #ba-model; visible: false"
+              event-set__click="_event: click; _target: #ba-model; visible: !ba-model.visible">
+    </a-entity>
+
+
+
+
+
+
+    <a-entity id="button"
+              gltf-model="#Armchairmodel"              
+              position="0 1.5 -5"
+              scale="0.2 0.2 0.2"
+              rotation="360 89 93"
+              class="raycastable"
+              clickable
+              event-set__click="_event: click; _target: #ar-model; visible: !ar-model.visible">
+    </a-entity>
+    
+    <!-- The GLTF model entity to display -->
+    <a-entity id="ar-model" gltf-model="#armchair"
+              position="3 2 -5"
+              scale="0.2 0.2 0.2"
+              rotation="360 89 93"
+              visible="false"
+              class="raycastable"
+              event-set__mouseenter="_event: mouseenter; _target: #ar-model; visible: false"
+              event-set__click="_event: click; _target: #ar-model; visible: !ar-model.visible">
+    </a-entity>
+
+
+
+
+
+    <a-entity id="button"
+              gltf-model="#bedmodel"              
+              position="0 1.5 -5"
+              scale="0.2 0.2 0.2"
+              rotation="360 89 93"
+              class="raycastable"
+              clickable
+              event-set__click="_event: click; _target: #be-model; visible: !be-model.visible">
+    </a-entity>
+    
+    <!-- The GLTF model entity to display -->
+    <a-entity id="be-model" gltf-model="#bed"
+              position="3 2 -5"
+              scale="0.2 0.2 0.2"
+              rotation="360 89 93"
+              visible="false"
+              class="raycastable"
+              event-set__mouseenter="_event: mouseenter; _target: #be-model; visible: false"
+              event-set__click="_event: click; _target: #be-model; visible: !be-model.visible">
+    </a-entity>
+
+
+
+
+
+    <a-entity id="button"
+              gltf-model="#bookshelfmodel"              
+              position="0 1.5 -5"
+              scale="0.2 0.2 0.2"
+              rotation="360 89 93"
+              class="raycastable"
+              clickable
+              event-set__click="_event: click; _target: #bo-model; visible: !bo-model.visible">
+    </a-entity>
+    
+    <!-- The GLTF model entity to display -->
+    <a-entity id="bo-model" gltf-model="#bookshelf"
+              position="3 2 -5"
+              scale="0.2 0.2 0.2"
+              rotation="360 89 93"
+              visible="false"
+              class="raycastable"
+              event-set__mouseenter="_event: mouseenter; _target: #bo-model; visible: false"
+              event-set__click="_event: click; _target: #bo-model; visible: !bo-model.visible">
+    </a-entity>
+
+
+
+
+
+    <a-entity id="button"
+              gltf-model="#barchairmodel"              
+              position="0 1.5 -5"
+              class="raycastable"
+              clickable
+              event-set__click="_event: click; _target: #model; visible: !model.visible">
+    </a-entity>
+    
+    <!-- The GLTF model entity to display -->
+    <a-entity id="model" gltf-model="#barchair"
+              position="3 2 -5"
+              scale="0.2 0.2 0.2"
+              rotation="360 89 93"
+              visible="false"
+              class="raycastable"
+              event-set__mouseenter="_event: mouseenter; _target: #model; visible: false"
+              event-set__click="_event: click; _target: #model; visible: !model.visible">
+    </a-entity>
+
+
+
+
+
+
+    <a-entity id="button"
+              gltf-model="#barchairmodel"              
+              position="0 1.5 -5"
+              class="raycastable"
+              clickable
+              event-set__click="_event: click; _target: #model; visible: !model.visible">
+    </a-entity>
+    
+    <!-- The GLTF model entity to display -->
+    <a-entity id="model" gltf-model="#barchair"
+              position="3 2 -5"
+              scale="0.2 0.2 0.2"
+              rotation="360 89 93"
+              visible="false"
+              class="raycastable"
+              event-set__mouseenter="_event: mouseenter; _target: #model; visible: false"
+              event-set__click="_event: click; _target: #model; visible: !model.visible">
+    </a-entity>
+
+
+
+
+
+    <a-entity id="button"
+              gltf-model="#barchairmodel"              
+              position="0 1.5 -5"
+              class="raycastable"
+              clickable
+              event-set__click="_event: click; _target: #model; visible: !model.visible">
+    </a-entity>
+    
+    <!-- The GLTF model entity to display -->
+    <a-entity id="model" gltf-model="#barchair"
+              position="3 2 -5"
+              scale="0.2 0.2 0.2"
+              rotation="360 89 93"
+              visible="false"
+              class="raycastable"
+              event-set__mouseenter="_event: mouseenter; _target: #model; visible: false"
+              event-set__click="_event: click; _target: #model; visible: !model.visible">
+    </a-entity>
+
+
+
+
+
+    <a-entity id="button"
+              gltf-model="#barchairmodel"              
+              position="0 1.5 -5"
+              class="raycastable"
+              clickable
+              event-set__click="_event: click; _target: #model; visible: !model.visible">
+    </a-entity>
+    
+    <!-- The GLTF model entity to display -->
+    <a-entity id="model" gltf-model="#barchair"
+              position="3 2 -5"
+              scale="0.2 0.2 0.2"
+              rotation="360 89 93"
+              visible="false"
+              class="raycastable"
+              event-set__mouseenter="_event: mouseenter; _target: #model; visible: false"
+              event-set__click="_event: click; _target: #model; visible: !model.visible">
+    </a-entity>
+
+
+
+
+
+    <a-entity id="button"
+              gltf-model="#barchairmodel"              
+              position="0 1.5 -5"
+              class="raycastable"
+              clickable
+              event-set__click="_event: click; _target: #model; visible: !model.visible">
+    </a-entity>
+    
+    <!-- The GLTF model entity to display -->
+    <a-entity id="model" gltf-model="#barchair"
+              position="3 2 -5"
+              scale="0.2 0.2 0.2"
+              rotation="360 89 93"
+              visible="false"
+              class="raycastable"
+              event-set__mouseenter="_event: mouseenter; _target: #model; visible: false"
+              event-set__click="_event: click; _target: #model; visible: !model.visible">
+    </a-entity>
+
+
+
+
+
+
+    <a-entity id="button"
+              gltf-model="#barchairmodel"              
+              position="0 1.5 -5"
+              class="raycastable"
+              clickable
+              event-set__click="_event: click; _target: #model; visible: !model.visible">
+    </a-entity>
+    
+    <!-- The GLTF model entity to display -->
+    <a-entity id="model" gltf-model="#barchair"
+              position="3 2 -5"
+              scale="0.2 0.2 0.2"
+              rotation="360 89 93"
+              visible="false"
+              class="raycastable"
+              event-set__mouseenter="_event: mouseenter; _target: #model; visible: false"
+              event-set__click="_event: click; _target: #model; visible: !model.visible">
+    </a-entity>
+
+
+
+
+
+    <a-entity id="button"
+              gltf-model="#barchairmodel"              
+              position="0 1.5 -5"
+              class="raycastable"
+              clickable
+              event-set__click="_event: click; _target: #model; visible: !model.visible">
+    </a-entity>
+    
+    <!-- The GLTF model entity to display -->
+    <a-entity id="model" gltf-model="#barchair"
+              position="3 2 -5"
+              scale="0.2 0.2 0.2"
+              rotation="360 89 93"
+              visible="false"
+              class="raycastable"
+              event-set__mouseenter="_event: mouseenter; _target: #model; visible: false"
+              event-set__click="_event: click; _target: #model; visible: !model.visible">
+    </a-entity>
+
+
+
+
+
+
+    <a-entity id="button"
+              gltf-model="#barchairmodel"              
+              position="0 1.5 -5"
+              class="raycastable"
+              clickable
+              event-set__click="_event: click; _target: #model; visible: !model.visible">
+    </a-entity>
+    
+    <!-- The GLTF model entity to display -->
+    <a-entity id="model" gltf-model="#barchair"
+              position="3 2 -5"
+              scale="0.2 0.2 0.2"
+              rotation="360 89 93"
+              visible="false"
+              class="raycastable"
+              event-set__mouseenter="_event: mouseenter; _target: #model; visible: false"
+              event-set__click="_event: click; _target: #model; visible: !model.visible">
+    </a-entity>
+
+
+
+
+
+    <a-entity id="button"
+              gltf-model="#barchairmodel"              
+              position="0 1.5 -5"
+              class="raycastable"
+              clickable
+              event-set__click="_event: click; _target: #model; visible: !model.visible">
+    </a-entity>
+    
+    <!-- The GLTF model entity to display -->
+    <a-entity id="model" gltf-model="#barchair"
+              position="3 2 -5"
+              scale="0.2 0.2 0.2"
+              rotation="360 89 93"
+              visible="false"
+              class="raycastable"
+              event-set__mouseenter="_event: mouseenter; _target: #model; visible: false"
+              event-set__click="_event: click; _target: #model; visible: !model.visible">
+    </a-entity>
+
+    
+    <!-- Camera and other scene elements -->
+    <a-camera position="0 1.6 0">
+      
+    </a-camera>
+  </a-scene>
+</body>
 </html>
