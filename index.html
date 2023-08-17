@@ -102,10 +102,33 @@
 
 
 
+    <a-entity id="ba-button"
+              gltf-model="#barchairmodel"              
+              position="-2 -2 -37"
+              scale="0.3 0.3 0.3"
+              rotation="0 90 0"
+              class="raycastable"
+              clickable
+              event-set__click="_event: click; _target: #ba-model; visible: !ba-model.visible">
+    </a-entity>
+    
+    <!-- The GLTF model entity to display -->
+    <a-entity id="ba-model" gltf-model="#barchair"
+              position="3 2 -5"
+              scale="0.2 0.2 0.2"
+              rotation="360 89 93"
+              visible="false"
+              class="raycastable"
+              event-set__mouseenter="_event: mouseenter; _target: #ba-model; visible: false"
+              event-set__click="_event: click; _target: #ba-model; visible: !ba-model.visible">
+    </a-entity>
 
 
 
-    <a-entity id="button"
+
+
+
+    <a-entity id="ar-button"
               gltf-model="#Armchairmodel"              
               position="0 1.5 -5"
               scale="0.2 0.2 0.2"
@@ -130,7 +153,7 @@
 
 
 
-    <a-entity id="button"
+    <a-entity id="be-button"
               gltf-model="#bedmodel"              
               position="0 1.5 -5"
               scale="0.2 0.2 0.2"
@@ -155,7 +178,7 @@
 
 
 
-    <a-entity id="button"
+    <a-entity id="bo-button"
               gltf-model="#bookshelfmodel"              
               position="0 1.5 -5"
               scale="0.2 0.2 0.2"
@@ -180,23 +203,23 @@
 
 
 
-    <a-entity id="button"
-              gltf-model="#barchairmodel"              
+    <a-entity id="cu-button"
+              gltf-model="#Cupboardmodel"              
               position="0 1.5 -5"
               class="raycastable"
               clickable
-              event-set__click="_event: click; _target: #model; visible: !model.visible">
+              event-set__click="_event: click; _target: #cu-model; visible: !cu-model.visible">
     </a-entity>
     
     <!-- The GLTF model entity to display -->
-    <a-entity id="model" gltf-model="#barchair"
+    <a-entity id="cu-model" gltf-model="#Cupboard"
               position="3 2 -5"
               scale="0.2 0.2 0.2"
               rotation="360 89 93"
               visible="false"
               class="raycastable"
-              event-set__mouseenter="_event: mouseenter; _target: #model; visible: false"
-              event-set__click="_event: click; _target: #model; visible: !model.visible">
+              event-set__mouseenter="_event: mouseenter; _target: #cu-model; visible: false"
+              event-set__click="_event: click; _target: #cu-model; visible: !cu-model.visible">
     </a-entity>
 
 
@@ -204,69 +227,69 @@
 
 
 
-    <a-entity id="button"
-              gltf-model="#barchairmodel"              
+    <a-entity id="di-button"
+              gltf-model="#Dinningmodel"              
               position="0 1.5 -5"
               class="raycastable"
               clickable
-              event-set__click="_event: click; _target: #model; visible: !model.visible">
+              event-set__click="_event: click; _target: #di-model; visible: !di-model.visible">
     </a-entity>
     
     <!-- The GLTF model entity to display -->
-    <a-entity id="model" gltf-model="#barchair"
+    <a-entity id="di-model" gltf-model="#DT"
               position="3 2 -5"
               scale="0.2 0.2 0.2"
               rotation="360 89 93"
               visible="false"
               class="raycastable"
-              event-set__mouseenter="_event: mouseenter; _target: #model; visible: false"
-              event-set__click="_event: click; _target: #model; visible: !model.visible">
+              event-set__mouseenter="_event: mouseenter; _target: #di-model; visible: false"
+              event-set__click="_event: click; _target: #di-model; visible: !di-model.visible">
     </a-entity>
 
 
 
 
 
-    <a-entity id="button"
-              gltf-model="#barchairmodel"              
+    <a-entity id="di2-button"
+              gltf-model="#Dinningmodel2"              
               position="0 1.5 -5"
               class="raycastable"
               clickable
-              event-set__click="_event: click; _target: #model; visible: !model.visible">
+              event-set__click="_event: click; _target: #di2-model; visible: !di2-model.visible">
     </a-entity>
     
     <!-- The GLTF model entity to display -->
-    <a-entity id="model" gltf-model="#barchair"
+    <a-entity id="di2-model" gltf-model="#DT2"
               position="3 2 -5"
               scale="0.2 0.2 0.2"
               rotation="360 89 93"
               visible="false"
               class="raycastable"
-              event-set__mouseenter="_event: mouseenter; _target: #model; visible: false"
-              event-set__click="_event: click; _target: #model; visible: !model.visible">
+              event-set__mouseenter="_event: mouseenter; _target: #di2-model; visible: false"
+              event-set__click="_event: click; _target: #di2-model; visible: !di2-model.visible">
     </a-entity>
 
 
 
 
 
-    <a-entity id="button"
-              gltf-model="#barchairmodel"              
+    <a-entity id="dr-button"
+              gltf-model="#Dressingmodel"              
               position="0 1.5 -5"
               class="raycastable"
               clickable
-              event-set__click="_event: click; _target: #model; visible: !model.visible">
+              event-set__click="_event: click; _target: #dr-model; visible: !dr-model.visible">
     </a-entity>
     
     <!-- The GLTF model entity to display -->
-    <a-entity id="model" gltf-model="#barchair"
+    <a-entity id="dr-model" gltf-model="#Dressingt"
               position="3 2 -5"
               scale="0.2 0.2 0.2"
               rotation="360 89 93"
               visible="false"
               class="raycastable"
-              event-set__mouseenter="_event: mouseenter; _target: #model; visible: false"
-              event-set__click="_event: click; _target: #model; visible: !model.visible">
+              event-set__mouseenter="_event: mouseenter; _target: #dr-model; visible: false"
+              event-set__click="_event: click; _target: #dr-model; visible: !dr-model.visible">
     </a-entity>
 
 
