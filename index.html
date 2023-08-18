@@ -25,6 +25,7 @@
 
 
     <a-scene  cursor="rayOrigin: mouse;fuse: false" raycaster="objects: .raycastable">
+
     <a-assets>
       <a-asset-item id="barchairmodel" src="http://localhost/AFrame/Bar chair.glb"></a-asset-item>
       <a-asset-item id="barchair" src="http://localhost/AFrame/Barmodel.glb"></a-asset-item>
@@ -66,6 +67,8 @@
 
       <!-- Add more <a-asset-item> elements for your other models -->
     </a-assets>
+
+    <a-entity gltf-model="http://localhost/AFrame/Virtual Mart.glb" position="-5 -2.5 -40.5"></a-entity>
     
     <!-- Create a plane to serve as the button -->
     <a-entity id="ba-button"
