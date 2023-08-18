@@ -42,27 +42,28 @@
       <a-asset-image id="Cupboard" src="http://localhost/AFrame/Cupmodel.glb"></a-asset-image>
 
       <a-asset-item id="Dinningmodel" src="http://localhost/AFrame/Dinning Table.glb"></a-asset-item>
-      <a-asset-item id="DT" src="http://localhost/AFrame/Dinningtabmodel.glb"></a-asset-item>
+      <a-asset-image id="DT" src="http://localhost/AFrame/Dinningtabmodel.glb"></a-asset-image>
 
       <a-asset-item id="Dinningmodel2" src="http://localhost/AFrame/Dinning Table2.glb"></a-asset-item>
-      <a-asset-item id="DT2" src="http://localhost/AFrame/Dinningtabmodel2.glb"></a-asset-item>
+      <a-asset-image id="DT2" src="http://localhost/AFrame/Dinningtabmodel2.glb"></a-asset-image>
 
       <a-asset-item id="Dressingmodel" src="http://localhost/AFrame/Dressing Table.glb"></a-asset-item>
-      <a-asset-item id="Dressingt" src="http://localhost/AFrame/DressingTab.glb"></a-asset-item>
+      <a-asset-image id="Dressingt" src="http://localhost/AFrame/DressingTab.glb"></a-asset-image>
+
       <a-asset-item id="Kitchensinkmodel" src="http://localhost/AFrame/Kitchen Sink.glb"></a-asset-item>
-      <a-asset-item id="sink" src="http://localhost/AFrame/sink.glb"></a-asset-item>
+      <a-asset-image id="sink" src="http://localhost/AFrame/sink.glb"></a-asset-image>
 
       <a-asset-item id="loungechairmodel" src="http://localhost/AFrame/Lounge Chair.glb"></a-asset-item>
-      <a-asset-item id="lchair" src="http://localhost/AFrame/lounge chair.glb"></a-asset-item>
+      <a-asset-image id="lchair" src="http://localhost/AFrame/lounge chair.glb"></a-asset-image>
 
       <a-asset-item id="sofamodel" src="http://localhost/AFrame/Sofa.glb"></a-asset-item>
-      <a-asset-item id="sofaa" src="http://localhost/AFrame/sofa.glb"></a-asset-item>
+      <a-asset-image id="sofaa" src="http://localhost/AFrame/sofa.glb"></a-asset-image>
 
       <a-asset-item id="stbedmodel" src="http://localhost/AFrame/Stand Bed.glb"></a-asset-item>
-      <a-asset-item id="stdbed" src="http://localhost/AFrame/standbed.glb"></a-asset-item>
+      <a-asset-image id="stdbed" src="http://localhost/AFrame/standbed.glb"></a-asset-image>
 
       <a-asset-item id="swingmodel" src="http://localhost/AFrame/Swing Chair.glb"></a-asset-item>
-      <a-asset-item id="schair" src="http://localhost/AFrame/swingchair.glb"></a-asset-item>
+      <a-asset-image id="schair" src="http://localhost/AFrame/swingchair.glb"></a-asset-image>
 
       <!-- Add more <a-asset-item> elements for your other models -->
     </a-assets>
@@ -105,7 +106,7 @@
     </a-entity>
     
     <!-- The GLTF model entity to display -->
-    <a-entity id="ba-model" gltf-model="#barchair"
+    <a-image id="ba-model" src="#barchair"
               position="3 2 -7"
               scale="0.2 0.2 0.2"
               rotation="360 89 93"
@@ -113,7 +114,7 @@
               class="raycastable"
               event-set__mouseenter="_event: mouseenter; _target: #ba-model; visible: false"
               event-set__click="_event: click; _target: #ba-model; visible: !ba-model.visible">
-    </a-entity>
+    </a-image>
 
 
 
@@ -131,7 +132,7 @@
     </a-entity>
     
     <!-- The GLTF model entity to display -->
-    <a-entity id="ar-model" gltf-model="#armchair"
+    <a-image id="ar-model" src="#armchair"
               position="-10 -1.9 -43.5"
               scale="0.2 0.2 0.2"
               rotation="360 89 93"
@@ -139,7 +140,7 @@
               class="raycastable"
               event-set__mouseenter="_event: mouseenter; _target: #ar-model; visible: false"
               event-set__click="_event: click; _target: #ar-model; visible: !ar-model.visible">
-    </a-entity>
+    </a-image>
 
 
 
