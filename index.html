@@ -33,7 +33,7 @@
       <a-asset-image id="barc" src="http://localhost/AFrame/Barmodel.png"></a-asset-image>
 
       <a-asset-item id="Armchairmodel" src="http://localhost/AFrame/Armchair.glb"></a-asset-item>
-      <a-asset-item id="armchair" src="http://localhost/AFrame/ArmChairB.glb"></a-asset-item>
+      <a-asset-image id="armchair" src="http://localhost/AFrame/armmodel.png"></a-asset-image>
 
       <a-asset-item id="bedmodel" src="http://localhost/AFrame/Bed.glb"></a-asset-item>
       <a-asset-image id="bed" src="http://localhost/AFrame/Bedmodel.png"></a-asset-image>
@@ -72,7 +72,7 @@
       <!-- Add more <a-asset-item> elements for your other models -->
     </a-assets>
 
-    <a-entity gltf-model="http://localhost/AFrame/Virtual Mart.glb" position="-5 -2.5 -40.5"></a-entity>
+    <a-entity gltf-model="http://localhost/AFrame/VirtualMart.glb" position="-5 -2.5 -40.5"></a-entity>
     
     <!-- Create a plane to serve as the button -->
     <a-entity id="ba-button"
@@ -88,9 +88,9 @@
     <!-- The GLTF model entity to display -->
     <a-image id="ba-model" 
               src="#barchair"
-              position="-2 -2 -37"
-              scale="0.2 0.2 0.2"
-              rotation="360 89 93"
+              position="-2 1 -37"
+              scale="3 3 3"
+              rotation="360 -89 0"
               visible="false"
               class="raycastable"
               event-set__mouseenter="_event: mouseenter; _target: #ba-model; visible: false"
@@ -111,9 +111,9 @@
     
     <!-- The GLTF model entity to display -->
     <a-image id="b-model" src="#barc"
-              position="-2 -2 -35"
-              scale="0.2 0.2 0.2"
-              rotation="360 89 93"
+              position="-1 2 -35"
+              scale="3 3 3"
+              rotation="360 -89 0"
               visible="false"
               class="raycastable"
               event-set__mouseenter="_event: mouseenter; _target: #b-model; visible: false"
@@ -136,15 +136,15 @@
     </a-entity>
     
     <!-- The GLTF model entity to display -->
-    <a-entity id="ar-model" gltf-model="#armchair"
-              position="-10 -1.5 -43.5"
-              scale="0.2 0.2 0.2"
-              rotation="360 90 93"
+    <a-image id="ar-model" src="#armchair"
+              position="-10 1 -39"
+              scale="2 2 2"
+              rotation="360 90 0"
               visible="false"
               class="raycastable"
               event-set__mouseenter="_event: mouseenter; _target: #ar-model; visible: false"
               event-set__click="_event: click; _target: #ar-model; visible: !ar-model.visible">
-    </a-entity>
+    </a-image>
 
 
 
@@ -161,11 +161,10 @@
     </a-entity>
     
     <!-- The GLTF model entity to display -->
-
     <a-image id="be-model" src="#bed"
-              position="-11 -2 -21 "
-              scale="0.2 0.2 0.2"
-              rotation="360 89 93"
+              position="-11 1.5 -21 "
+              scale="3 3 3"
+              rotation="360 89 0"
               visible="false"
               class="raycastable"
               event-set__mouseenter="_event: mouseenter; _target: #be-model; visible: false"
@@ -187,10 +186,9 @@
     
     <!-- The GLTF model entity to display -->
     <a-image id="bo-model" src="#bookshelf"
-              position="-6.5 -2.5 -21"
-
-              scale="0.2 0.2 0.2"
-              rotation="360 89 93"
+              position="1 2 -17"
+              scale="3 3 3"
+              rotation="360 -90 0"
               visible="false"
               class="raycastable"
               event-set__mouseenter="_event: mouseenter; _target: #bo-model; visible: false"
@@ -212,11 +210,10 @@
     </a-entity>
     
     <!-- The GLTF model entity to display -->
-
     <a-image id="cu-model" src="#Cupboard"
-              position="-16 -7 -9.5"
-              scale="0.2 0.2 0.2"
-              rotation="360 89 93"
+              position="-12 4 -14"
+              scale="3 3 3"
+              rotation="360 89 0"
               visible="false"
               class="raycastable"
               event-set__mouseenter="_event: mouseenter; _target: #cu-model; visible: false"
@@ -239,11 +236,10 @@
     </a-entity>
     
     <!-- The GLTF model entity to display -->
-
     <a-image id="di-model" src="#DT"
-              position="-0.7 -2 -22"
-              scale="0.2 0.2 0.2"
-              rotation="360 89 93"
+              position="-0.7 1 -22"
+              scale="3 3 3"
+              rotation="360 -89 0"
               visible="false"
               class="raycastable"
               event-set__mouseenter="_event: mouseenter; _target: #di-model; visible: false"
@@ -265,11 +261,10 @@
     </a-entity>
     
     <!-- The GLTF model entity to display -->
-
     <a-image id="di2-model" src="#DT2"
-              position="0 -1.7 -28"
-              scale="0.2 0.2 0.2"
-              rotation="360 89 93"
+              position="0 1.7 -28"
+              scale="3 3 3"
+              rotation="360 -89 0"
               visible="false"
               class="raycastable"
               event-set__mouseenter="_event: mouseenter; _target: #di2-model; visible: false"
@@ -291,12 +286,10 @@
     </a-entity>
     
     <!-- The GLTF model entity to display -->
-
     <a-image id="dr-model" src="#Dressingt"
-              position="-15.5 -2.9 -31.5"
-
-              scale="0.2 0.2 0.2"
-              rotation="360 89 93"
+              position="-11 3 -26"
+              scale="3 3 3"
+              rotation="360 180 0"
               visible="false"
               class="raycastable"
               event-set__mouseenter="_event: mouseenter; _target: #dr-model; visible: false"
@@ -319,9 +312,9 @@
     
     <!-- The GLTF model entity to display -->
     <a-image id="ks-model" src="#sink"
-              position="1.5 -2 -33"
-              scale="0.2 0.2 0.2"
-              rotation="360 89 93"
+              position="-1 2 -37"
+              scale="3 3 3"
+              rotation="360 -89 0"
               visible="false"
               class="raycastable"
               event-set__mouseenter="_event: mouseenter; _target: #ks-model; visible: false"
@@ -345,9 +338,9 @@
     
     <!-- The GLTF model entity to display -->
     <a-image id="lc-model" src="#lchair"
-              position="-12.5 -1.9 -10"
-              scale="0.2 0.2 0.2"
-              rotation="360 89 93"
+              position="-12.5 1.9 -10"
+              scale="3 3 3"
+              rotation="360 89 0"
               visible="false"
               class="raycastable"
               event-set__mouseenter="_event: mouseenter; _target: #lc-model; visible: false"
@@ -369,10 +362,10 @@
     </a-entity>
     
     <!-- The GLTF model entity to display -->
-    <a-image id="so=model" src="#sofaa"
-              position="-11 -3.5 -29"
-              scale="0.2 0.2 0.2"
-              rotation="360 89 93"
+    <a-image id="so-model" src="#sofaa"
+              position="-13 2 -29.5"
+              scale="3 3 3"
+              rotation="360 89 0"
               visible="false"
               class="raycastable"
               event-set__mouseenter="_event: mouseenter; _target: #so-model; visible: false"
@@ -396,9 +389,9 @@
     
     <!-- The GLTF model entity to display -->
     <a-image id="sb-model" src="#stdbed"
-              position="-10 -3.8 -47"
-              scale="0.2 0.2 0.2"
-              rotation="360 89 93"
+              position="-13 3 -35"
+              scale="3 3 3"
+              rotation="360 89 0"
               visible="false"
               class="raycastable"
               event-set__mouseenter="_event: mouseenter; _target: #sb-model; visible: false"
@@ -421,9 +414,9 @@
     
     <!-- The GLTF model entity to display -->
     <a-image id="sw-model" src="#schair"
-              position="-2 -1 -31"
-              scale="0.2 0.2 0.2"
-              rotation="360 89 93"
+              position="-1.5 1 -25"
+              scale="2 2 2"
+              rotation="360 -180 0"
               visible="false"
               class="raycastable"
               event-set__mouseenter="_event: mouseenter; _target: #sw-model; visible: false"
