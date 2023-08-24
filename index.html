@@ -7,63 +7,49 @@
   
   <body>
 
-    <a-entity id="cameraRig" position="0 1.6 0" >
-      <a-entity id="head" position="0 0 0" camera="userHeight:1.6" look-controls="pointerLockEnabled:true">
-        <a-entity position="0.1 -0.1 0"
-          touch-listener
-          teleport-controls=
-            "cameraRig: #cameraRig;
-             teleportOrigin: #head;
-             startEvents:starttouch;
-             endEvents:endtouch;
-             curveShootingSpeed:15;
-             hitCylinderRadius:1;
-             collisionEntities: [ground]"
-          >
-        </a-entity>
-      </a-entity>
+    
 
 
     <a-scene  cursor="rayOrigin: mouse;fuse: false" raycaster="objects: .raycastable">
     <a-assets>
       <a-asset-item id="barchairmodel" src="http://localhost/AFrame/Bar chair.glb"></a-asset-item>
-      <a-asset-image id="barchair" src="http://localhost/AFrame/Barmodel.png"></a-asset-image>
+      <a-asset-image id="barchair" src="D:\gitclones\V-mart\Barmodel.png"></a-asset-image>
 
-      <a-asset-item id="Armchairmodel" src="http://localhost/AFrame/Armchair.glb"></a-asset-item>
-      <a-asset-image id="armchair" src="http://localhost/AFrame/armmodel.png"></a-asset-image>
+      <a-asset-item id="Armchairmodel" src="D:\gitclones\V-mart\Armchair.glb"></a-asset-item>
+      <a-asset-item id="armchair" src="D:\gitclones\V-mart\armmodel.glb"></a-asset-item>
 
       <a-asset-item id="bedmodel" src="http://localhost/AFrame/Bed.glb"></a-asset-item>
-      <a-asset-image id="bed" src="http://localhost/AFrame/Bedmodel.png"></a-asset-image>
+      <a-asset-image id="bed" src="D:\gitclones\V-mart\Bedmodel.png"></a-asset-image>
 
       <a-asset-item id="bookshelfmodel" src="http://localhost/AFrame/Book Shelf.glb"></a-asset-item>
-      <a-asset-image id="bookshelf" src="http://localhost/AFrame/bookmodel.png"></a-asset-image>
+      <a-asset-image id="bookshelf" src="D:\gitclones\V-mart\bookmodel.png"></a-asset-image>
 
       <a-asset-item id="Cupboardmodel" src="http://localhost/AFrame/Cupboard.glb"></a-asset-item>
-      <a-asset-image id="Cupboard" src="http://localhost/AFrame/Cupmodel.png"></a-asset-image>
+      <a-asset-image id="Cupboard" src="D:\gitclones\V-mart\Cupmodel.png"></a-asset-image>
 
       <a-asset-item id="Dinningmodel" src="http://localhost/AFrame/Dinning Table.glb"></a-asset-item>
-      <a-asset-image id="DT" src="http://localhost/AFrame/Dinningtabmodel.png"></a-asset-image>
+      <a-asset-image id="DT" src="D:\gitclones\V-mart\Dinningtabmodel.png"></a-asset-image>
 
       <a-asset-item id="Dinningmodel2" src="http://localhost/AFrame/Dinning Table2.glb"></a-asset-item>
-      <a-asset-image id="DT2" src="http://localhost/AFrame/Dinningtabmodel2.png"></a-asset-image>
+      <a-asset-image id="DT2" src="D:\gitclones\V-mart\Dinningtabmodel2.png"></a-asset-image>
       
       <a-asset-item id="Dressingmodel" src="http://localhost/AFrame/Dressing Table.glb"></a-asset-item>
-      <a-asset-image id="Dressingt" src="http://localhost/AFrame/DressingTab.png"></a-asset-image>
+      <a-asset-image id="Dressingt" src="D:\gitclones\V-mart\DressingTab.png"></a-asset-image>
 
       <a-asset-item id="Kitchensinkmodel" src="http://localhost/AFrame/Kitchen Sink.glb"></a-asset-item>
-      <a-asset-image id="sink" src="http://localhost/AFrame/sink.png"></a-asset-image>
+      <a-asset-image id="sink" src="D:\gitclones\V-mart\sink.png"></a-asset-image>
 
       <a-asset-item id="loungechairmodel" src="http://localhost/AFrame/Lounge Chair.glb"></a-asset-item>
-      <a-asset-image id="lchair" src="http://localhost/AFrame/lounge chair.png"></a-asset-image>
+      <a-asset-image id="lchair" src="D:\gitclones\V-mart\lounge chair.png"></a-asset-image>
 
       <a-asset-item id="sofamodel" src="http://localhost/AFrame/Sofa.glb"></a-asset-item>
-      <a-asset-image id="sofaa" src="http://localhost/AFrame/sofa.png"></a-asset-image>
+      <a-asset-image id="sofaa" src="D:\gitclones\V-mart\sofa.png"></a-asset-image>
 
       <a-asset-item id="stbedmodel" src="http://localhost/AFrame/Stand Bed.glb"></a-asset-item>
-      <a-asset-image id="stdbed" src="http://localhost/AFrame/standbed.png"></a-asset-image>
+      <a-asset-image id="stdbed" src="D:\gitclones\V-mart\sofa.png"></a-asset-image>
 
       <a-asset-item id="swingmodel" src="http://localhost/AFrame/Swing Chair.glb"></a-asset-item>
-      <a-asset-image id="schair" src="http://localhost/AFrame/swingchair.png"></a-asset-image>
+      <a-asset-image id="schair" src="D:\gitclones\V-mart\swingchair.glb"></a-asset-image>
 
 
       <!-- Add more <a-asset-item> elements for your other models -->
@@ -133,7 +119,7 @@
     </a-entity>
     
     <!-- The GLTF model entity to display -->
-    <a-image id="ar-model" src="#armchair"
+    <a-entity id="ar-model" src="#armchair"
               position="-10 -1.9 -43.5"
               scale="0.2 0.2 0.2"
               rotation="360 89 93"
@@ -141,7 +127,7 @@
               class="raycastable"
               event-set__mouseenter="_event: mouseenter; _target: #ar-model; visible: false"
               event-set__click="_event: click; _target: #ar-model; visible: !ar-model.visible">
-    </a-image>
+    </a-entity>
 
 
 
@@ -278,6 +264,7 @@
               rotation="0 -90 0" 
               scale="1.4 1.4 1.4"
               class="raycastable"
+              
               clickable
               event-set__click="_event: click; _target: #dr-model; visible: !dr-model.visible">
     </a-entity>
@@ -426,5 +413,27 @@
       
     </a-camera>
   </a-scene>
+  <script>
+    AFRAME.registerComponent('clickable', {
+      init: function () {
+        this.el.addEventListener('click', () => {
+          const images = document.querySelectorAll('a-image');
+          images.forEach(image => {
+            image.setAttribute('visible', 'false');
+          });
+          this.el.querySelector('.image-model').setAttribute('visible', 'true');
+        });
+      }
+    });
+  
+    AFRAME.registerComponent('hover-invisible', {
+      init: function () {
+        this.el.addEventListener('mouseenter', () => {
+          this.el.setAttribute('visible', 'false');
+        });
+      }
+    });
+  </script>
+  
 </body>
 </html>
